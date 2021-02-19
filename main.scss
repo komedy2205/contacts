@@ -1,0 +1,262 @@
+@import "./variables";
+
+.container {
+  width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.contacts {
+  &__item {
+    padding-left: 0px;
+    margin-left: 20px;
+    padding-top: 43px;
+  }
+
+  &__cafe {
+    padding-right: auto;
+
+    width: 80px;
+    height: auto;
+
+    font-family: DM Sans;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: $white-color;
+
+    background-color: $brand-brown-color;
+    border-radius: 4px;
+  }
+
+  &__foodtruck {
+    padding-right: auto;
+
+    width: 130px;
+    height: auto;
+
+    font-family: DM Sans;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.04em;
+
+    color: $white-color;
+
+    background-color: $brand-green-color;
+    border-radius: 4px;
+  }
+
+  &__town {
+    margin-top: 25px;
+    margin-bottom: 10px;
+
+    width: 89px;
+    height: 22px;
+    left: 70px;
+    top: 5651px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+
+    letter-spacing: 0.04em;
+
+    color: $primary-text-color;
+  }
+
+  &__descrip {
+    width: 179px;
+    height: auto;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    color: $line-gradient-color;
+
+    padding-bottom: 25px;
+    border-bottom: 1px solid $line-gradient-color;
+  }
+
+  &__days {
+    width: 107px;
+    height: 22px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+
+    color: $primary-text-color;
+  }
+
+  &__time {
+    width: 107px;
+    height: 22px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+
+    color: $subtitle-color;
+  }
+
+  &__adress {
+    width: 179px;
+    height: 37px;
+
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+
+    color: $additional-color;
+  }
+
+  &__buttons {
+    @media screen and (max-width: $max-mobile-width) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-basis: (100% / 1);
+      justify-content: center;
+    }
+
+    @media screen and (min-width: $min-tablet-width) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__location {
+    @media screen and (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+      margin-bottom: 10px;
+    }
+    @media screen and (min-width: $min-tablet-width) {
+      margin-right: 15px;
+      margin-bottom: 0px;
+    }
+  }
+
+  @media screen and (min-width: $min-mobile-width) and (max-width: $max-tablet-width) {
+    background-image: linear-gradient(
+      to bottom,
+      $white-color 10%,
+      $secondary-bcg-color 10%,
+      $secondary-bcg-color 90%
+    );
+  }
+
+  @media screen and (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+    padding-bottom: 115px;
+  }
+
+  @media screen and (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    padding-bottom: 160px;
+  }
+
+  @media screen and (min-width: $min-desktop-width) {
+    background-color: $secondary-bcg-color;
+
+    padding-bottom: 165px;
+  }
+
+  &__column {
+    width: 220px;
+    height: 427px;
+
+    background-color: $white-color;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+
+    @media screen and (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: $min-tablet-width) {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+    @media screen and (min-width: $min-tablet-width) {
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+
+  &__list {
+    @media screen and (min-width: $min-tablet-width) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+.locations {
+  width: 192px;
+  height: 44px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  align-items: center;
+  text-align: center;
+
+  color: $white-color;
+
+  border-radius: 24px;
+  background-color: $footer-button-color;
+  border-color: transparent;
+}
+
+.franchise {
+  width: 192px;
+  height: 44px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 21px;
+  align-items: center;
+  text-align: center;
+
+  color: $footer-button-color;
+
+  border-radius: 24px;
+  background-color: $white-color;
+  border-color: transparent;
+}
+
+.locations-svg {
+  fill: $white-color;
+
+  width: 4px;
+  height: 8px;
+}
+
+.franchise-svg {
+  fill: $footer-button-color;
+
+  width: 4px;
+  height: 8px;
+}
