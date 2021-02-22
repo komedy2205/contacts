@@ -19,12 +19,10 @@ li {
 .contacts {
   &__item {
     padding-left: 0px;
-    padding-top: 25px;
   }
 
   &__cafe {
     margin: 0px;
-    padding-right: auto;
 
     width: 80px;
     height: auto;
@@ -46,7 +44,6 @@ li {
 
   &__foodtruck {
     margin: 0px;
-    padding-right: auto;
 
     width: 130px;
     height: auto;
@@ -68,8 +65,8 @@ li {
 
   &__town {
     margin: 0px;
-    padding-top: 25px;
-    padding-bottom: 10px;
+    margin-top: 25px;
+    margin-bottom: 14px;
 
     width: 89px;
     height: 22px;
@@ -86,8 +83,8 @@ li {
   }
 
   &__descrip {
-    margin: 0px;
-    padding-top: 12px;
+    margin-top: 0px;
+    margin-bottom: 25px;
 
     height: auto;
 
@@ -111,7 +108,6 @@ li {
 
   &__days {
     margin: 0px;
-    padding-bottom: 20px;
 
     width: 107px;
     height: 22px;
@@ -124,6 +120,9 @@ li {
   }
 
   &__time {
+    margin-bottom: 15px;
+    margin-top: 0px;
+
     width: 107px;
     height: 22px;
 
@@ -146,7 +145,8 @@ li {
   }
 
   &__buttons {
-    @media screen and (min-width: $max-mobile-width) {
+    @media screen and (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+      align-items: center;
       justify-content: center;
     }
 
@@ -239,23 +239,38 @@ li {
   }
 
   &__list {
-    @media screen and (min-width: $min-tablet-width) {
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+      margin-bottom: 54px;
+    }
+
+    @media screen and (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      margin-bottom: 81px;
+
       display: flex;
       justify-content: center;
+    }
+
+    @media screen and (min-width: $min-desktop-width) {
+      margin-bottom: 86px;
     }
   }
 }
 
 .working-days {
-  padding-top: 25px;
+  padding-top: 30px;
   border-top: 1px solid $line-gradient-color;
 
-  padding-bottom: 25px;
+  padding-bottom: 15px;
   border-bottom: 1px solid $line-gradient-color;
 }
 
 .working-adress {
   margin-top: 25px;
+  padding-left: 0px;
 }
 
 .locations {
