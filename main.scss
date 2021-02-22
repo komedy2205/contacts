@@ -19,11 +19,11 @@ li {
 .contacts {
   &__item {
     padding-left: 0px;
-    margin-left: 20px;
-    padding-top: 43px;
+    padding-top: 25px;
   }
 
   &__cafe {
+    margin: 0px;
     padding-right: auto;
 
     width: 80px;
@@ -45,6 +45,7 @@ li {
   }
 
   &__foodtruck {
+    margin: 0px;
     padding-right: auto;
 
     width: 130px;
@@ -66,8 +67,9 @@ li {
   }
 
   &__town {
-    margin-top: 25px;
-    margin-bottom: 10px;
+    margin: 0px;
+    padding-top: 25px;
+    padding-bottom: 10px;
 
     width: 89px;
     height: 22px;
@@ -84,7 +86,9 @@ li {
   }
 
   &__descrip {
-    width: 179px;
+    margin: 0px;
+    padding-top: 12px;
+
     height: auto;
 
     font-weight: 500;
@@ -92,11 +96,23 @@ li {
     line-height: 18px;
     color: $line-gradient-color;
 
-    padding-bottom: 25px;
-    border-bottom: 1px solid $line-gradient-color;
+    @media screen and (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
+      width: 179px;
+    }
+
+    @media screen and (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      width: 157px;
+    }
+
+    @media screen and (min-width: $min-desktop-width) {
+      width: 243px;
+    }
   }
 
   &__days {
+    margin: 0px;
+    padding-bottom: 20px;
+
     width: 107px;
     height: 22px;
 
@@ -130,10 +146,7 @@ li {
   }
 
   &__buttons {
-    @media screen and (max-width: $max-mobile-width) {
-      display: flex;
-      flex-wrap: wrap;
-      flex-basis: (100% / 1);
+    @media screen and (min-width: $max-mobile-width) {
       justify-content: center;
     }
 
@@ -177,7 +190,6 @@ li {
   }
 
   &__column {
-    width: 220px;
     height: 427px;
 
     background-color: $white-color;
@@ -187,6 +199,12 @@ li {
     @media screen and (min-width: $min-mobile-width) and (max-width: $max-mobile-width) {
       margin-right: auto;
       margin-left: auto;
+
+      padding-top: 51px;
+      padding-left: 21px;
+      padding-right: 21px;
+
+      width: 175px;
     }
 
     &:not(:last-child) {
@@ -194,14 +212,29 @@ li {
     }
 
     @media screen and (min-width: $min-tablet-width) {
+      width: 160px;
+
+      padding-top: 51px;
+      padding-left: 32px;
+      padding-right: 32px;
+
       &:not(:last-child) {
         margin-right: 20px;
       }
     }
+
     @media screen and (min-width: $min-tablet-width) {
       &:not(:last-child) {
         margin-right: 30px;
       }
+    }
+
+    @media screen and (min-width: $min-desktop-width) {
+      width: 240px;
+
+      padding-top: 51px;
+      padding-left: 43px;
+      padding-right: 43px;
     }
   }
 
@@ -211,6 +244,18 @@ li {
       justify-content: center;
     }
   }
+}
+
+.working-days {
+  padding-top: 25px;
+  border-top: 1px solid $line-gradient-color;
+
+  padding-bottom: 25px;
+  border-bottom: 1px solid $line-gradient-color;
+}
+
+.working-adress {
+  margin-top: 25px;
 }
 
 .locations {
@@ -245,18 +290,20 @@ li {
   border-radius: 24px;
   background-color: $white-color;
   border-color: transparent;
+
+  fill: $footer-button-color;
 }
 
 .locations-svg {
   fill: $white-color;
 
-  width: 4px;
-  height: 8px;
+  width: 20px;
+  height: 20px;
 }
 
 .franchise-svg {
   fill: $footer-button-color;
 
-  width: 4px;
-  height: 8px;
+  width: 20px;
+  height: 20px;
 }
